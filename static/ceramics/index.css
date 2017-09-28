@@ -1,0 +1,33 @@
+#background {
+  z-index: -100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  #background {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+header {
+  background-color: #FFF;
+}
+nav {
+  width: 400px; /* equals .nav-link width multiplied by .nav-link count */
+}
+#fade {
+  height: 200px;
+  width: 100%;
+  background: #FFF;
+  background: -moz-linear-gradient(#FFF, rgba(0, 0, 0, 0));
+  background: -webkit-linear-gradient(#FFF, rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(#FFF, rgba(0, 0, 0, 0));
+  background: -ms-linear-gradient(#FFF, rgba(0, 0, 0, 0)); /* for IE10 */
+  background: linear-gradient(#FFF, rgba(0, 0, 0, 0));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#ffffff'); /* for IE7-8-9 */
+}

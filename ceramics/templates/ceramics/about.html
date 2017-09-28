@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+  <link rel="stylesheet" href="{% static "ceramics/about.css" %}" />
+
+  <div id="about-container">
+    <img id="about-picture" src="images/about.jpg" alt="Pottery" />
+    <div id="about-text">
+      Monika Vitek was born and raised in the Czech Republic and now lives with
+      her husband and daughter in Portland, Oregon. She began working in ceramics in 2009.
+      <br /><br />
+      Monika’s work is grounded in both functionality and design, and she enjoys making pieces for
+      everyday use that are pleasing to the eye. She works in small batches, creating each
+      one-of-a-kind piece by hand in her home studio using a potter’s wheel and hand building
+      techniques. She uses primarily porcelain, and frequently integrates ilmenite, a mineral that she
+      collects at the Oregon coast. Monika appreciates the tangible nature of ceramics, and takes
+      inspiration from the beauty of the nature and everyday life.
+      <br /><br />
+      Coursework:
+      <br />
+      2009-2016: Portland Community College, with Richard Brandt
+      <br />
+      2016: Oregon College of Arts and Crafts, with J Shiloh Gastello
+      <br /><br />
+      Shows/Exhibitions:
+      <br />
+      2016: Companion Gallery, juried show “Irons in the Fire”
+      <br />
+      2016: Behind the Museum Cafe
+    </div>
+  </div>
+
+  <footer>
+    <div class="font" id="left-footer-text">© 2017 Design by J. Janak</div>
+    <a id="instagram" href="https://www.instagram.com/monikavitekceramics/" target="_blank">
+      <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+    </a>
+    <div class="font" id="right-footer-text">monikavitekceramics@gmail.com</div>
+</footer>
+
+{% endblock %}

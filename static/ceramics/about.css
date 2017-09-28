@@ -1,0 +1,34 @@
+#about-container {
+  overflow: auto; /* prevents child being larger than parent */
+  margin: 50px 50px 105px;
+  font-size: 0;
+}
+#about-text, #about-picture {
+  display: inline-block;
+  vertical-align: top;
+}
+#about-text {
+  float: left;
+  width: 40%; /* for browsers not supporting calc */
+  width: calc(50% - 40px);
+  padding: 0 20px;
+  text-align: center;
+  font-size: 18px;
+  font-family: font96003 !important;
+  font-family: arial, sans-serif;
+  color: #000;
+}
+#about-picture {
+  width: 50%;
+  max-width: 600px;
+}
+@media only screen and (max-width: 899px) {
+  #about-text, #about-picture {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  #about-picture {
+    margin: 0 auto 25px;
+  }
+}

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monika Vitek - Ceramics</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jacob Janak">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap CDN's -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Base stylesheet -->
+    <link rel="stylesheet" href="{% static "ceramics/base.css" %}" />
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html" id="text-logo">
+        <span class="big-letter">M</span>onika
+        <span class="big-letter">V</span>itek Ceramics
+      </a>
+
+      <div id="nav">
+        <nav class="fall-down-effect">
+          <div id="left-line" class="line"><!-- Empty --></div>
+          <a class="nav-link" href="{% url 'work' %}" data-hover="Work">Work</a>
+          <a class="nav-link disabled" href="{% url 'store' %}" data-hover="Store">Store</a>
+          <a class="nav-link" href="{% url 'about' %}" data-hover="About">About</a>
+          <a class="nav-link" href="{% url 'events' %}" data-hover="Events">Events</a>
+          <div id="right-line" class="line"><!-- Empty --></div>
+        </nav>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
