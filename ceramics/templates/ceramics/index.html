@@ -1,59 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Meta data -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monika Vitek</title>
-  <meta name="description" content="">
-  <meta name="author" content="Jacob Janak">
-  <!-- Link effects from Codrops -->
-  <link rel="stylesheet" type="text/css" href="./link-effects/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="plugins/link-effects.css" />
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Custom stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css">
-  <!-- Module stylesheets -->
-  <script src="./link-effects/js/modernizr.custom.js"></script>
-  <link href="fonts/unicode.optima.ttf" rel="stylesheet" type="text/css">
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <header>
-    <a href="index.html" id="text-logo">
-      <span class="big-letter">M</span>onika
-      <span class="big-letter">V</span>itek Ceramics
-    </a>
+{% extends 'base.html' %}
 
-    <div id="nav">
-      <nav class="fall-down-effect">
-        <div id="left-line" class="line"><!-- Empty --></div>
-        <a class="nav-link" href="work.html" data-hover="Work">Work</a>
-        <a class="nav-link disabled" href="store.html" data-hover="Store">Store</a>
-        <a class="nav-link" href="about.html" data-hover="About">About</a>
-        <a class="nav-link" href="events.html" data-hover="Events">Events</a>
-        <div id="right-line" class="line"><!-- Empty --></div>
-      </nav>
-    </div>
-  </header>
+{% load static %}
+{% block content %}
+
+  <link rel="stylesheet" href="{% static "ceramics/css/index.css" %}" />
 
   <div id="fade">
     <!-- Empty, this just creates a nice color fading effect -->
   </div>
 
-  <img id="background" src="images/background.jpg" alt="Background photo" />
+  <img id="background" src="{% static "ceramics/images/background.jpg" %}" alt="Background photo" />
 
   <!-- Scripts -->
-  <script src="js/jquery-3.1.1.min.js"></script>
   <!-- For css gradient used with #fade -->
   <!-- [if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
-  <script src="js/script.js"></script>
-</body>
-</html>
+  <script src="{% static "ceramics/js/script.js" %}"></script>
+
+{% endblock %}

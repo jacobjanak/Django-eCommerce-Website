@@ -5,7 +5,7 @@
 /* Default element behavior overrides */
 body {
   margin: 0;
-  font-family: "Optima";
+  font-family: "Optima" !important;
 }
 ::-moz-selection { background-color: #DAA520; }
 ::selection { background-color: #DAA520; }

@@ -18,7 +18,10 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Base stylesheet -->
-    <link rel="stylesheet" href="{% static "ceramics/base.css" %}" />
+    <link rel="stylesheet" href="{% static "ceramics/css/base.css" %}" />
+    <link rel="stylesheet" href="{% static "ceramics/css/link-effects.css" %}" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{% static "ceramics/fonts/unicode.optima.ttf" %}" type="text/css">
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
@@ -26,7 +29,7 @@
   <body>
 
     <header>
-      <a href="index.html" id="text-logo">
+      <a href="{% url 'index' %}" id="text-logo">
         <span class="big-letter">M</span>onika
         <span class="big-letter">V</span>itek Ceramics
       </a>
@@ -34,10 +37,10 @@
       <div id="nav">
         <nav class="fall-down-effect">
           <div id="left-line" class="line"><!-- Empty --></div>
-          <a class="nav-link" href="{% url 'work' %}" data-hover="Work">Work</a>
-          <a class="nav-link disabled" href="{% url 'store' %}" data-hover="Store">Store</a>
-          <a class="nav-link" href="{% url 'about' %}" data-hover="About">About</a>
-          <a class="nav-link" href="{% url 'events' %}" data-hover="Events">Events</a>
+          <a class="nav-link {% if active_link == 'work' %}active{% endif %}" href="{% url 'work' %}" data-hover="Work">Work</a>
+          <a class="nav-link {% if active_link == 'store' %}active{% endif %}" href="{% url 'store' %}" data-hover="Store">Store</a>
+          <a class="nav-link {% if active_link == 'about' %}active{% endif %}" href="{% url 'about' %}" data-hover="About">About</a>
+          <a class="nav-link {% if active_link == 'events' %}active{% endif %}" href="{% url 'events' %}" data-hover="Events">Events</a>
           <div id="right-line" class="line"><!-- Empty --></div>
         </nav>
       </div>
@@ -45,6 +48,16 @@
 
     {% block content %}
     {% endblock %}
+
+    {% if not no_footer %}
+    <footer>
+      <div class="font" id="left-footer-text">© 2017 Design by J. Janak</div>
+      <a id="instagram" href="https://www.instagram.com/monikavitekceramics/" target="_blank">
+        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="font" id="right-footer-text">monikavitekceramics@gmail.com</div>
+    </footer>
+    {% endif %}
 
   </body>
 </html>
