@@ -25,7 +25,7 @@ SECRET_KEY = 'i(!5m5&aje%59v*_$+g0z-#g0^a=)u&)f32(za&(**6(3j(mhw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['monikavitekceceramics.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['monikavitekceramics.herokuapp.com', 'localhost']
 
 
 # Application definition
