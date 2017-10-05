@@ -51,7 +51,7 @@ nav {
     overflow: hidden;
   }
 }
-.nav-link, .nav-link-disabled {
+.nav-link {
   width: 100px;
   margin: 0 !important;
   position: relative;
@@ -62,7 +62,7 @@ nav {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.nav-link-disabled { color: #DAA520 !important; }
+nav > .active { color: #DAA520 !important; }
 @media only screen and (max-width: 599px) {
   .nav-link:hover::before { visibility: hidden; }
 }

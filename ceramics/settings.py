@@ -25,7 +25,7 @@ SECRET_KEY = 'i(!5m5&aje%59v*_$+g0z-#g0^a=)u&)f32(za&(**6(3j(mhw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sheltered-refuge-29153.herokuapp.com']
+ALLOWED_HOSTS = ['monikavitekceceramics.herokuapp.com', 'localhost']
 
 
 # Application definition
