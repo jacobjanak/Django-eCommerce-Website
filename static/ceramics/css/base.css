@@ -9,12 +9,7 @@ body {
 }
 ::-moz-selection { background-color: #DAA520; }
 ::selection { background-color: #DAA520; }
-a, a:hover { text-decoration: none; }
-a:focus { text-decoration: none; }
-header {
-  width: 100%;
-  text-align: center;
-}
+a, a:hover, a:focus { text-decoration: none; }
 /* end */
 
 .font {
@@ -39,15 +34,19 @@ header {
 /* end logo */
 
 /* nav */
+header {
+  width: 100%;
+  text-align: center;
+}
 nav {
-  width: 100%; /* equals .nav-link width multiplied by .nav-link count */
+  width: 100%;
   overflow: hidden;
   display: inline-block;
 }
 @media only screen and (min-width: 900px) {
   /* For artistic lines on header */
   #nav {
-    margin: 0 50px;
+    margin: 0 100px;
     overflow: hidden;
   }
 }
@@ -107,12 +106,19 @@ nav > .active { color: #DAA520 !important; }
 }
 /* end nav */
 
+/* standard page container */
+#page-container {
+  overflow: auto; /* prevents child being larger than parent */
+  margin: 50px 100px 105px;
+  font-size: 0;
+}
+
 /* footer */
 footer {
   z-index: 100;
   position: fixed;
-  left: 50px;
-  right: 50px;
+  left: 100px;
+  right: 100px;
   bottom: 0;
   height: 60px;
   background-color: white;

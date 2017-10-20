@@ -1,0 +1,38 @@
+.column {
+  display: inline-block;
+  width: calc(50% - 25px);
+  overflow: auto;
+  vertical-align: top;
+}
+.column:first-of-type {
+  margin-right: 25px;
+}
+.column:last-of-type {
+  margin-left: 25px;
+}
+
+#product-image {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#product-name {
+  font-size: 32px;
+}
+
+#product-price {
+  font-size: 16px;
+  color: #686868;
+}
+
+#product-description {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+#add-to-cart {
+  vertical-align: bottom;
+  margin-top: 60px;
+}

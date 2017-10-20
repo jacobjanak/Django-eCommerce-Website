@@ -18,7 +18,7 @@ header {
   background-color: #FFF;
 }
 nav {
-  width: 400px; /* equals .nav-link width multiplied by .nav-link count */
+  width: 423px; /* can't tell ya why, but this is the ideal width */
 }
 #fade {
   height: 200px;

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+  <link rel="stylesheet" href="{% static "ceramics/css/product.css" %}" />
+
+  <div id="page-container">
+    <div class="column">
+      <img id="product-image" src="/{{ product.image }}" alt="" />
+    </div>
+    <div class="column">
+      <p id="product-name">
+        {{ product.name }}
+      </p>
+      <p id="product-price">
+        ${{ product.price }}
+      </p>
+      <p id="product-description">
+        {{ product.description }}
+      </p>
+      <form id="add-to-cart" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="business" value="jakeathotmail@gmail.com">
+        <input type="hidden" name="cmd" value="_xclick">
+
+        <!-- Specify details about the item that buyers will purchase. -->
+        <input type="hidden" name="item_name" value="{{ product.name }}">
+        <input type="hidden" name="amount" value="{{ product.price }}">
+        <input type="hidden" name="currency_code" value="USD">
+
+        <!-- Display the payment button. -->
+        <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now">
+        <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
