@@ -3,10 +3,8 @@
   vertical-align: top;
 }
 #about-text {
+  margin-right: 25px;
   float: left;
-  width: 40%; /* for browsers not supporting calc */
-  width: calc(50% - 40px);
-  padding: 0 20px;
   text-align: center;
   font-size: 18px;
   font-family: font96003 !important;
@@ -14,8 +12,12 @@
   color: #000;
 }
 #about-picture {
-  width: 50%;
+  margin-left: 25px;
   max-width: 600px;
+}
+#about-text, #about-picture {
+  width: 45%; /* for browsers not supporting calc */
+  width: calc(50% - 25px);
 }
 @media only screen and (max-width: 899px) {
   #about-text, #about-picture {

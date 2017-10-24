@@ -6,33 +6,76 @@
   <link rel="stylesheet" href="{% static "ceramics/css/product.css" %}" />
 
   <div id="page-container">
-    <div class="column">
-      <img id="product-image" src="/{{ product.image }}" alt="" />
+    <div id="back-to-store" class="fall-down-effect">
+      <a href="{% url 'store' %}">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to store
+      </a>
     </div>
-    <div class="column">
-      <p id="product-name">
-        {{ product.name }}
-      </p>
-      <p id="product-price">
-        ${{ product.price }}
-      </p>
-      <p id="product-description">
-        {{ product.description }}
-      </p>
-      <form id="add-to-cart" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="business" value="jakeathotmail@gmail.com">
-        <input type="hidden" name="cmd" value="_xclick">
+    <br />
+    <div id="column-container">
+      <div class="column">
+        <img id="product-image" src="/{{ product.image }}" alt="" />
+      </div>
+      <div class="column">
+        <p id="product-name">
+          {{ product.name }}
+        </p>
+        <p id="product-price">
+          ${{ product.price }}
+        </p>
+        <p id="product-description">
+          {{ product.description }}
+        </p>
+        <form id="add-to-cart" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="business" value="jakeathotmail@gmail.com">
+          <input type="hidden" name="cmd" value="_xclick">
 
-        <!-- Specify details about the item that buyers will purchase. -->
-        <input type="hidden" name="item_name" value="{{ product.name }}">
-        <input type="hidden" name="amount" value="{{ product.price }}">
-        <input type="hidden" name="currency_code" value="USD">
+          <!-- Specify details about the item that buyers will purchase. -->
+          <input type="hidden" name="item_name" value="{{ product.name }}">
+          <input type="hidden" name="amount" value="{{ product.price }}">
+          <input type="hidden" name="currency_code" value="USD">
 
-        <!-- Display the payment button. -->
-        <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now">
-        <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-      </form>
+          <!-- Display the payment button. -->
+          <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now">
+          <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+        </form>
+
+      </div>
     </div>
+
+    <div id="share">
+      <p id="share-text">
+        <i class="fa fa-share-alt" aria-hidden="true"></i> Share this
+      </p>
+      <ul class="share-buttons">
+        <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+            <img alt="Share on Facebook" src="{% static "ceramics/images/social-media-icons/Facebook.svg" %}" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&text=:%20https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+            <img alt="Tweet" src="{% static "ceramics/images/social-media-icons/Twitter.svg" %}" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;">
+            <img alt="Post to Tumblr" src="{% static "ceramics/images/social-media-icons/Tumblr.svg" %}" />
+          </a>
+        </li>
+        <li>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
+            <img alt="Pin it" src="{% static "ceramics/images/social-media-icons/Pinterest.svg" %}" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+            <img alt="Submit to Reddit" src="{% static "ceramics/images/social-media-icons/Reddit.svg" %}" />
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
 {% endblock %}
