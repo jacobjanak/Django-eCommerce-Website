@@ -1,0 +1,10 @@
+#page-container > p {
+  text-align: center;
+  /* font-family: font96003 !important; */
+  font-size: 18px;
+}
+#page-container > h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 24px;
+}
