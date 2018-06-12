@@ -1,19 +1,6 @@
 ========
-ceramics
+Django eCommerce Website
 ========
 
 
-Add a short description here!
-
-
-Description
-===========
-
-A longer description of your project goes here...
-
-
-Note
-====
-
-This project has been set up using PyScaffold 2.5.8. For details and usage
-information on PyScaffold see http://pyscaffold.readthedocs.org/.
+I am creating a full-stack, mobile-responsive, eCommerce website in Django for a client who wants to sell her ceramics online. It is still a work in progress, as I am currently waiting on her for input and instructions.
