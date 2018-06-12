@@ -31,6 +31,12 @@ a, a:hover, a:focus { text-decoration: none; }
   color: #000 !important;
 }
 .big-letter { font-size: 2em; }
+@media only screen and (max-width: 599px) {
+  #text-logo {
+    line-height: 32px;
+    font-size: 16px;
+  }
+}
 /* end logo */
 
 /* nav */
@@ -63,7 +69,10 @@ nav {
 }
 nav > .active { color: #DAA520 !important; }
 @media only screen and (max-width: 599px) {
-  .nav-link:hover::before { visibility: hidden; }
+  .nav-link {
+    width: 100%;
+    margin-top: 8px !important;
+  }
 }
 .line {
   display: inline-block;
@@ -112,6 +121,11 @@ nav > .active { color: #DAA520 !important; }
   margin: 50px 100px 105px;
   font-size: 0;
 }
+@media only screen and (max-width: 599px) {
+  #page-container {
+    margin: 20px 25px 105px;
+  }
+}
 
 /* footer */
 footer {
@@ -141,11 +155,18 @@ footer {
 }
 #left-footer-text, #right-footer-text {
   width: 320px;
+  width: calc(50% - 20px);
   overflow: visible;
 }
 @media only screen and (max-width: 899px) {
-  footer { text-align: left; }
-  #left-footer-text { display: none; }
+  #instagram, #left-footer-text, #right-footer-text {
+    width: 100%;
+    line-height: 16px;
+    text-align: center;
+  }
+  #right-footer-text {
+    margin-top: 4px;
+  }
 }
 @media only screen and (max-width: 599px) {
   footer {

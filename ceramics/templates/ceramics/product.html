@@ -5,15 +5,6 @@
 
   <link rel="stylesheet" href="{% static "ceramics/css/product.css" %}" />
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
   <div id="page-container">
     <div id="back-to-store" class="fall-down-effect">
       <a href="{% url 'store' %}">
@@ -49,41 +40,40 @@
           <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
         </form>
 
+        <div id="share">
+          <p id="share-text">
+            <i class="fa fa-share-alt" aria-hidden="true"></i> Share this
+          </p>
+          <ul class="share-buttons">
+            <li>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                <img alt="Share on Facebook" src="{% static "ceramics/images/social-media-icons/Facebook.svg" %}" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&text=:%20https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                <img alt="Tweet" src="{% static "ceramics/images/social-media-icons/Twitter.svg" %}" />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;">
+                <img alt="Post to Tumblr" src="{% static "ceramics/images/social-media-icons/Tumblr.svg" %}" />
+              </a>
+            </li>
+            <li>
+              <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
+                <img alt="Pin it" src="{% static "ceramics/images/social-media-icons/Pinterest.svg" %}" />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                <img alt="Submit to Reddit" src="{% static "ceramics/images/social-media-icons/Reddit.svg" %}" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
-    <div id="share">
-      <p id="share-text">
-        <i class="fa fa-share-alt" aria-hidden="true"></i> Share this
-      </p>
-      <ul class="share-buttons">
-        <li>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
-            <img alt="Share on Facebook" src="{% static "ceramics/images/social-media-icons/Facebook.svg" %}" />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&text=:%20https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
-            <img alt="Tweet" src="{% static "ceramics/images/social-media-icons/Twitter.svg" %}" />
-          </a>
-        </li>
-        <li>
-          <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;">
-            <img alt="Post to Tumblr" src="{% static "ceramics/images/social-media-icons/Tumblr.svg" %}" />
-          </a>
-        </li>
-        <li>
-          <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
-            <img alt="Pin it" src="{% static "ceramics/images/social-media-icons/Pinterest.svg" %}" />
-          </a>
-        </li>
-        <li>
-          <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmonikavitekceramics.herokuapp.com%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
-            <img alt="Submit to Reddit" src="{% static "ceramics/images/social-media-icons/Reddit.svg" %}" />
-          </a>
-        </li>
-      </ul>
-    </div>
-
-<div class="fb-like" data-href="http://localhost:8000/store/item/2" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 {% endblock %}

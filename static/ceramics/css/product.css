@@ -48,14 +48,12 @@
 }
 #add-to-cart {
   vertical-align: bottom;
-  margin-top: 60px;
+  margin-top: 32px;
 }
 
 /* Share Icons */
 #share {
-  vertical-align: bottom;
-  margin-top: -64px;
-  padding-left: calc(50% + 25px);
+  margin-top: 32px;
 }
 ul.share-buttons{
   list-style: none;
@@ -77,4 +75,16 @@ ul.share-buttons .sr-only{
 }
 ul.share-buttons img{
   width: 32px;
+}
+
+@media only screen and (max-width: 899px) {
+  .column {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+  #product-name {
+    margin-top: 16px;
+  }
 }
